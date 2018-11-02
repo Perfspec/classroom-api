@@ -10,22 +10,22 @@ import javax.persistence.Id;
 public class Trainee {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Long id;
+	private Integer id;
 	@Column(length = 50)
 	private String traineeName;
 	
 	public Trainee() {}
 	
-	public Trainee(Long id, String traineeName) {
+	public Trainee(Integer id, String traineeName) {
 		this.id = id;
 		this.traineeName = traineeName;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
