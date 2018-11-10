@@ -8,7 +8,7 @@ public class ClassroomServiceImpl implements ClassroomService {
 
 	@Inject
 	private ClassroomRepository repo;
-	
+
 	@Override
 	public String getAll() {
 		return repo.getAll();
@@ -46,14 +46,12 @@ public class ClassroomServiceImpl implements ClassroomService {
 
 	@Override
 	public String deleteClass(Integer idClass) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.deleteClass(idClass);
 	}
 
 	@Override
 	public String deleteTrainee(Integer idClass, Integer idTrainee) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.deleteTrainee(idClass, idTrainee);
 	}
 
 }

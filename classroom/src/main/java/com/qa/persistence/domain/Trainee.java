@@ -6,16 +6,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "trainee")
+@Entity
 public class Trainee {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Id
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@Column(length = 50)
 	private String traineeName;
-	
-	public Trainee() {}
-	
+
+	public Trainee() {
+	}
+
 	public Trainee(Integer id, String traineeName) {
 		this.id = id;
 		this.traineeName = traineeName;
@@ -25,10 +26,6 @@ public class Trainee {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public String getTraineeName() {
 		return traineeName;
 	}
@@ -36,7 +33,5 @@ public class Trainee {
 	public void setTraineeName(String traineeName) {
 		this.traineeName = traineeName;
 	}
-	
-	
 
 }
